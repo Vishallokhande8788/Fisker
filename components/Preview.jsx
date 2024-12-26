@@ -11,7 +11,7 @@ function Preview({ exterior, wheel, interior }) {
       {/* Exterior Image */}
       <Zoom>
         <Image
-          src="/slipstream_black.webp"
+          src={imageMap[interior].wheels[wheel]}
           alt=""
           width={0}
           height={0}
