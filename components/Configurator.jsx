@@ -19,7 +19,7 @@ function Configurator() {
             <button
               key={swatch.id}
               className={`${swatch.id === 1 && "ring"} rounded-full ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(i + 1)}
+              onClick={() => console.log(swatch.name)}
             >
               <Image
                 src={swatch.src}
@@ -34,16 +34,16 @@ function Configurator() {
         </div>
       </div>
 
-      {/* Wheel Color */}
+      {/* Interior */}
       <div className="my-4">
-        <h3 className="mb-2 text-lg font-bold">Wheel Options</h3>
+        <h3 className="mb-2 text-lg font-bold">Interior</h3>
 
         <div className="flex gap-2">
           {interiorSwatch.map((swatch) => (
             <button
               key={swatch.id}
               className={`${swatch.id === 0 && "ring"} rounded-full ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(swatch.id + 1)}
+              onClick={() => console.log(swatch.name)}
             >
               <Image
                 src={swatch.src}
@@ -58,16 +58,16 @@ function Configurator() {
         </div>
       </div>
 
-      {/* Interior Color */}
+      {/* Wheel Options */}
       <div className="my-4">
-        <h3 className="mb-2 text-lg font-bold">Interior Color</h3>
+        <h3 className="mb-2 text-lg font-bold">Wheel Options</h3>
 
         <div className="flex gap-2">
           {wheelSwatch.map((swatch) => (
             <button
               key={swatch.id}
               className={`${swatch.id === 0 && "ring"} ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(swatch.id + 1)}
+              onClick={() => console.log(swatch.name)}
             >
               <Image
                 src={swatch.src}
