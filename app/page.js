@@ -6,9 +6,9 @@ import Configurator from "@/components/Configurator";
 
 function Home() {
   const [state, setState] = useState({
-    exterior: "Red Planet",
-    wheel: "Slipstream",
-    interior: "White",
+    exterior: "Black Pearl",
+    wheel: "Aerostealth",
+    interior: "Black",
   });
 
   const handleStateChange = (option, value) => {
@@ -29,7 +29,7 @@ function Home() {
           <Preview {...state} />
         </section>
         <aside className="w-full md:w-1/4">
-          <Configurator onChange={handleStateChange} />
+          <Configurator onChange={handleStateChange} {...state} />
         </aside>
       </main>
     </div>
