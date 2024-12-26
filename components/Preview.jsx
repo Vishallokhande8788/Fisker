@@ -3,8 +3,6 @@ import Zoom from "react-medium-image-zoom";
 import { imageMap, interiorMap } from "@/lib/imageMap";
 import "react-medium-image-zoom/dist/styles.css";
 
-// exterior: "Black Pearl"
-// wheel: "Slipstream"
 function Preview({ exterior, wheel, interior }) {
   return (
     <>
@@ -37,7 +35,7 @@ function Preview({ exterior, wheel, interior }) {
         />
       </Zoom>
       <section className="mt-4 pl-2">
-        <h3 className="text-xl font-bold">Interior Color</h3>
+        <h3 className="text-xl font-bold">Interior {interior}</h3>
       </section>
     </>
   );

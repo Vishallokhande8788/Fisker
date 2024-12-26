@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { exteriorSwatch, interiorSwatch, wheelSwatch } from "@/lib/swatch";
 
-function Configurator() {
+function Configurator({ onChange }) {
   return (
     <>
       <h1 className="mb-4 text-4xl font-bold">Fisker Ocean</h1>
@@ -19,7 +19,7 @@ function Configurator() {
             <button
               key={swatch.id}
               className={`${swatch.id === 1 && "ring"} rounded-full ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(swatch.name)}
+              onClick={() => onChange("exterior", swatch.name)}
             >
               <Image
                 src={swatch.src}
@@ -43,7 +43,7 @@ function Configurator() {
             <button
               key={swatch.id}
               className={`${swatch.id === 0 && "ring"} rounded-full ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(swatch.name)}
+              onClick={() => onChange("interior", swatch.name)}
             >
               <Image
                 src={swatch.src}
@@ -67,7 +67,7 @@ function Configurator() {
             <button
               key={swatch.id}
               className={`${swatch.id === 0 && "ring"} ring-blue-300 duration-100 hover:scale-105`}
-              onClick={() => console.log(swatch.name)}
+              onClick={() => onChange("wheel", swatch.name)}
             >
               <Image
                 src={swatch.src}
